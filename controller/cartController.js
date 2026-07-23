@@ -1,0 +1,1 @@
+//what should happen when someone hits an endpoint
