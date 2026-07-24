@@ -1,0 +1,186 @@
+{
+  "info": {
+    "_postman_id": "f160cfd6-7434-4e73-beb4-9a3294a6604a",
+    "name": "ecommerce application",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56362417",
+    "_collection_link": "https://go.postman.co/collection/56362417-f160cfd6-7434-4e73-beb4-9a3294a6604a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "carts",
+      "item": [
+        {
+          "name": "Get Cart",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/carts/6a63c594cf52e9aca790c1a9",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "carts",
+                "6a63c594cf52e9aca790c1a9"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create a cart",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/carts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "carts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add new product to cart",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"product\":\"6a627a82963af6e95f03f927\",\r\n    \"quantity\":2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/carts/6a63c594cf52e9aca790c1a9/items",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "carts",
+                "6a63c594cf52e9aca790c1a9",
+                "items"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "products",
+      "item": [
+        {
+          "name": "Get all products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"name\": \"ps3\", \"price\": 2000, \"description\": \"playstation 3 fat with 2 controllers ad 5 games\", \"category\": \"electronics\", \"image\": \"https://example.com/images/playstaion3.jpg\" }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update product",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"toothbrush\",\r\n    \"price\": 3.99,\r\n    \"description\": \"A soft-bristled toothbrush for daily use.\",\r\n    \"category\": \"Personal Care\",\r\n    \"image\": \"https://example.com/images/toothbrush.jpg\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/products/6a627a82963af6e95f03f927",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "products",
+                "6a627a82963af6e95f03f927"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/products/6a63c325cf52e9aca790c1a8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "products",
+                "6a63c325cf52e9aca790c1a8"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
